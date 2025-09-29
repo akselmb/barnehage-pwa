@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { getTranslation } from '../../lib/i18n';
 
 interface LoginFormProps {
   onLogin: (email: string, password: string) => Promise<void>;
@@ -18,14 +17,14 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false }
     try {
       await onLogin(email, password);
     } catch (err) {
-      setError(getTranslation('errorLogin'));
+      setError('Kunne ikke logge inn. Sjekk e-post og passord.');
     }
   };
 
   return (
     <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
       <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">
-        {getTranslation('login')}
+        Logg inn
       </h2>
       
       {error && (
@@ -37,7 +36,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false }
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            {getTranslation('email')}
+            E-post
           </label>
           <input
             type="email"
@@ -45,14 +44,14 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false }
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kindergarten-500 focus:border-transparent"
+            className="w-full px-3 py-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             placeholder="din@epost.no"
           />
         </div>
         
         <div>
           <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-            {getTranslation('password')}
+            Passord
           </label>
           <input
             type="password"
@@ -60,7 +59,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false }
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-kindergarten-500 focus:border-transparent"
+            className="w-full px-3 py-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             placeholder="••••••••"
           />
         </div>
@@ -68,9 +67,9 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false }
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-kindergarten-600 text-white py-2 px-4 rounded-md hover:bg-kindergarten-700 focus:outline-none focus:ring-2 focus:ring-kindergarten-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full bg-gray-500 text-black py-2 px-4 rounded-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          {loading ? getTranslation('loading') : getTranslation('login')}
+          {loading ? 'Laster...' : 'Logg inn'}
         </button>
       </form>
     </div>
