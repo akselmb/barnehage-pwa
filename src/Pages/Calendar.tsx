@@ -151,8 +151,10 @@ const Calendar: React.FC = () => {
   const getWeekDates = (date: Date): Date[] => {
     const week = [];
     const startOfWeek = new Date(date);
-    startOfWeek.setDate(date.getDate() - date.getDay() + 1); // Start from Monday
-    
+    const day = startOfWeek.getDay();
+    const offset = day === 0 ? -6 : 1 - day; // Sunday => previous Monday
+    startOfWeek.setDate(startOfWeek.getDate() + offset);
+
     for (let i = 0; i < 7; i++) {
       const day = new Date(startOfWeek);
       day.setDate(startOfWeek.getDate() + i);
