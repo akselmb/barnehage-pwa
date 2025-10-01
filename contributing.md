@@ -29,10 +29,12 @@ Dette dokumentet beskriver standarder for **branches**, **commits** og **PR-flyt
 Vi følger **Conventional Commits**:
 
 **Format:**
+```
 <type>[optional scope]: <short description>
 [optional body]
+```
 
-**Type-forklaringer**
+### Type-forklaringer
 
 | Type       | Eksempel                                   | Bruk                              |
 |-----------|-------------------------------------------|----------------------------------|
@@ -66,4 +68,4 @@ develop    --> PR --> main (production)
 
 - Feature branches merges kun inn i develop.
 - Develop merges kun inn i main.
-- Branch protection + Actions sikrer at tests og lint kjører før merge.
+- Branch protection + Actions sikrer at tests og lint kjører før merge.```

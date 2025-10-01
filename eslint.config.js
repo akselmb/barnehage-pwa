@@ -25,7 +25,8 @@ export default defineConfig([
       "@typescript-eslint/explicit-module-boundary-types": "off",
   
       // React / JSX regler
-      "react/react-in-jsx-scope": "off",
+      // React / JSX regler
+      "react-refresh/only-export-components": "warn",
       "react-refresh/only-export-components": "warn",
   
       // Generelle regler

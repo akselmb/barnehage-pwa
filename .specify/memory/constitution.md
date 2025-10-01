@@ -25,7 +25,7 @@ The application MUST function as a native-like Progressive Web App. Offline func
 All kindergartens MUST share the same Supabase project and database schema. Each kindergarten MUST have a unique tenant_id for data isolation. Children MUST be linked to their kindergarten via tenant_id. Families MUST be connected to children through child_id relationships. The architecture MUST be designed to allow future migration to separate projects if needed. Row Level Security (RLS) MUST enforce tenant isolation at the database level.
 
 ### V. Norwegian Language Priority
-All user-facing content MUST be in Norwegian (Bokmål). Date/time formats MUST follow Norwegian conventions. Error messages MUST be user-friendly in Norwegian. Documentation MUST be available in both Norwegian.
+All user-facing content MUST be in Norwegian (Bokmål). Date/time formats MUST follow Norwegian conventions. Error messages MUST be user-friendly in Norwegian. Documentation MUST be available in Norwegian.
 
 ## Security Requirements
 
