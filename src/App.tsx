@@ -12,6 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleLogin = async (_email: string, _password: string) => {
     setLoading(true);
     // TODO: Implement actual authentication with Supabase
@@ -19,13 +20,12 @@ function App() {
     setTimeout(() => {
       setIsAuthenticated(true);
       setLoading(false);
-      console.log("Logged in");
     }, 1000);
   };
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-  };
+  // const handleLogout = () => {
+  //   setIsAuthenticated(false);
+  // };
 
   if (!isAuthenticated) {
     return (

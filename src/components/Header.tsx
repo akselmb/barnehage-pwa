@@ -13,7 +13,9 @@ export const Header: React.FC = () => {
                         <h1 className="text-2xl font-bold">Vindheim barnehage</h1>
                     </div>
                     <button
-                    className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none`}
+                    type="button"
+                    aria-label="Åpne innstillinger"
+                    className="flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none"
                     onClick={() => navigate('/settings')}
                     >
                         <Cog6ToothIcon className="h-8 w-8 mb-1" />

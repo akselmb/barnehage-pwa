@@ -10,10 +10,10 @@ interface Activity {
   type: 'activity' | 'event' | 'reminder';
 }
 
-interface DayData {
-  date: Date;
-  activities: Activity[];
-}
+// interface DayData {
+//   date: Date;
+//   activities: Activity[];
+// }
 
 // Mock data for activities
 const mockActivities: { [key: string]: Activity[] } = {
@@ -151,8 +151,10 @@ const Calendar: React.FC = () => {
   const getWeekDates = (date: Date): Date[] => {
     const week = [];
     const startOfWeek = new Date(date);
-    startOfWeek.setDate(date.getDate() - date.getDay() + 1); // Start from Monday
-    
+    const day = startOfWeek.getDay();
+    const offset = day === 0 ? -6 : 1 - day; // Sunday => previous Monday
+    startOfWeek.setDate(startOfWeek.getDate() + offset);
+
     for (let i = 0; i < 7; i++) {
       const day = new Date(startOfWeek);
       day.setDate(startOfWeek.getDate() + i);
@@ -168,13 +170,13 @@ const Calendar: React.FC = () => {
     });
   };
 
-  const formatFullDate = (date: Date): string => {
-    return date.toLocaleDateString('nb-NO', { 
-      day: '2-digit', 
-      month: 'long', 
-      year: 'numeric' 
-    });
-  };
+  // const formatFullDate = (date: Date): string => {
+  //   return date.toLocaleDateString('nb-NO', { 
+  //     day: '2-digit', 
+  //     month: 'long', 
+  //     year: 'numeric' 
+  //   });
+  // };
 
   const getWeekRange = (date: Date): string => {
     const weekDates = getWeekDates(date);
@@ -269,7 +271,7 @@ const Calendar: React.FC = () => {
       {/* Calendar List */}
       <div className="max-w-4xl mx-auto px-4 pt-6">
         <div className="space-y-4">
-          {weekDates.map((date, index) => {
+          {weekDates.map((date) => {
             const dateString = date.toISOString().split('T')[0];
             const activities = mockActivities[dateString] || [];
             const isToday = date.toDateString() === new Date().toDateString();

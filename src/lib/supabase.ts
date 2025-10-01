@@ -5,7 +5,9 @@ const MASTER_SUPABASE_URL = import.meta.env.VITE_MASTER_SUPABASE_URL || '';
 const MASTER_SUPABASE_ANON_KEY = import.meta.env.VITE_MASTER_SUPABASE_ANON_KEY || '';
 
 // Individual kindergarten project (will be set dynamically)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 let currentKindergartenUrl = '';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 let currentKindergartenKey = '';
 
 // Master admin client for managing kindergartens

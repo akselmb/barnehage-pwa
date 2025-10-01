@@ -17,24 +17,24 @@ export const Navigation: React.FC = () => {
             >
             <div className="flex justify-around items-center h-16 max-w-md mx-auto">
                 <button
-                className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none ${isActive('/calendar') ? 'text-blue-600!' : 'text-gray-700'}`}
-                onClick={() => navigate('/calendar')}
+                  className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none ${isActive('/calendar') ? '!text-blue-600' : ''}`}
+                  onClick={() => navigate('/calendar')}
                 >
                     <CalendarIcon className="h-6 w-6 mb-1" />
                     <span className="text-xs">Kalender</span>
                 </button>
 
                 <button
-                className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none ${isActive('/') ? 'text-blue-600!' : 'text-gray-700'}`}
-                onClick={() => navigate('/')}
+                  className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none ${isActive('/') ? '!text-blue-600' : ''}`}
+                  onClick={() => navigate('/')}
                 >
                     <HomeIcon className="h-6 w-6 mb-1" />
                     <span className="text-xs">Innlegg</span>
                 </button>
                 
                 <button
-                className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none ${isActive('/children') ? 'text-blue-600!' : 'text-gray-700'}`}
-                onClick={() => navigate('/children')}
+                  className={`flex flex-col items-center justify-center text-gray-700 hover:text-blue-600 focus:outline-none ${isActive('/children') ? '!text-blue-600' : ''}`}
+                  onClick={() => navigate('/children')}
                 >
                     <FaceSmileIcon className="h-6 w-6 mb-1" />
                     <span className="text-xs">Barn</span>

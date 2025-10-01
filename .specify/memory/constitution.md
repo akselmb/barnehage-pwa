@@ -18,17 +18,14 @@ Every feature MUST be designed with security as the primary concern. Multi-tenan
 ### II. Test-Driven Development (NON-NEGOTIABLE)
 TDD mandatory: Tests written → User approved → Tests fail → Then implement. Red-Green-Refactor cycle strictly enforced. End-to-end tests MUST be prioritized for critical user flows. Unit tests MUST cover all business logic. Test coverage MUST exceed 80% for production code. All tests MUST pass before any deployment.
 
-### III. Feature Flag Implementation
-All new features MUST be implemented behind feature flags. Feature flags MUST be configurable at runtime without code deployment. Feature flags MUST have clear rollback procedures. A/B testing capabilities MUST be built into the feature flag system. Feature flags MUST be documented with clear enable/disable criteria.
-
-### IV. PWA Excellence Standards
+### III. PWA Excellence Standards
 The application MUST function as a native-like Progressive Web App. Offline functionality MUST be implemented for core features. Push notifications MUST work reliably across all supported platforms. App installation MUST be seamless on mobile devices. Performance MUST meet Core Web Vitals standards. Service worker MUST be properly configured for caching strategies.
 
-### V. Simplified Multi-tenant Architecture
+### IV. Simplified Multi-tenant Architecture
 All kindergartens MUST share the same Supabase project and database schema. Each kindergarten MUST have a unique tenant_id for data isolation. Children MUST be linked to their kindergarten via tenant_id. Families MUST be connected to children through child_id relationships. The architecture MUST be designed to allow future migration to separate projects if needed. Row Level Security (RLS) MUST enforce tenant isolation at the database level.
 
-### VI. Norwegian Language Priority
-All user-facing content MUST be in Norwegian (Bokmål). Date/time formats MUST follow Norwegian conventions. Error messages MUST be user-friendly in Norwegian. Documentation MUST be available in both Norwegian.
+### V. Norwegian Language Priority
+All user-facing content MUST be in Norwegian (Bokmål). Date/time formats MUST follow Norwegian conventions. Error messages MUST be user-friendly in Norwegian. Documentation MUST be available in Norwegian.
 
 ## Security Requirements
 
@@ -111,7 +108,6 @@ All user-facing content MUST be in Norwegian (Bokmål). Date/time formats MUST f
 - Code coverage MUST be reported
 
 ### Deployment Process
-- Feature flags MUST be used for gradual rollouts
 - Database migrations MUST be backward compatible
 - Rollback procedures MUST be tested and documented
 - Environment parity MUST be maintained
