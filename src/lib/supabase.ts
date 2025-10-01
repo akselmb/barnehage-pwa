@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+/*import { createClient } from '@supabase/supabase-js';
 
 // Multi-tenant architecture: Master admin project for managing kindergartens
 const MASTER_SUPABASE_URL = import.meta.env.VITE_MASTER_SUPABASE_URL || '';
@@ -260,3 +260,4 @@ export type KindergartenDatabase = {
     };
   };
 };
+*/
