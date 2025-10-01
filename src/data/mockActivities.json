@@ -1,0 +1,122 @@
+{
+  "2025-09-22": [
+    {
+      "id": "1",
+      "title": "Sykkeldag! Ta med sykkel om du vil",
+      "type": "activity"
+    },
+    {
+      "id": "2",
+      "title": "Fruktur og grønt",
+      "description": "Vi lærer om sunn mat",
+      "time": "10:00",
+      "type": "activity"
+    }
+  ],
+  "2025-09-23": [
+    {
+      "id": "3",
+      "title": "Maling og kunst",
+      "description": "Vi maler med fingrene i dag",
+      "time": "09:30",
+      "type": "activity"
+    },
+    {
+      "id": "4",
+      "title": "Utflukt til biblioteket",
+      "description": "Vi leser bøker sammen",
+      "time": "13:00",
+      "type": "event"
+    }
+  ],
+  "2025-09-24": [
+    {
+      "id": "5",
+      "title": "Musikk og dans",
+      "description": "Vi synger og danser sammen",
+      "time": "10:30",
+      "type": "activity"
+    }
+  ],
+  "2025-09-25": [
+    {
+      "id": "6",
+      "title": "Lek i sandkassen",
+      "description": "Vi bygger sandslott",
+      "time": "11:00",
+      "type": "activity"
+    },
+    {
+      "id": "7",
+      "title": "Husk: Ta med regntøy",
+      "type": "reminder"
+    }
+  ],
+  "2025-09-26": [
+    {
+      "id": "8",
+      "title": "Fridag",
+      "description": "Barnehagen er stengt",
+      "type": "event"
+    }
+  ],
+  "2025-09-29": [
+    {
+      "id": "9",
+      "title": "Naturvandring",
+      "description": "Vi går tur i skogen",
+      "time": "09:00",
+      "type": "activity"
+    },
+    {
+      "id": "10",
+      "title": "Fiskedag",
+      "description": "Vi lærer om fisk",
+      "time": "14:00",
+      "type": "activity"
+    }
+  ],
+  "2025-09-30": [
+    {
+      "id": "11",
+      "title": "Baking",
+      "description": "Vi baker brød sammen",
+      "time": "10:00",
+      "type": "activity"
+    }
+  ],
+  "2025-10-01": [
+    {
+      "id": "12",
+      "title": "Gymtime",
+      "description": "Vi trener kroppen",
+      "time": "09:30",
+      "type": "activity"
+    },
+    {
+      "id": "13",
+      "title": "Foredrag: Sunn kost",
+      "description": "Foreldreforedrag kl. 18:00",
+      "time": "18:00",
+      "type": "event"
+    }
+  ],
+  "2025-10-02": [
+    {
+      "id": "14",
+      "title": "Håndverk",
+      "description": "Vi lager gaver til mamma og pappa",
+      "time": "10:30",
+      "type": "activity"
+    }
+  ],
+  "2025-10-03": [
+    {
+      "id": "15",
+      "title": "Fridag",
+      "description": "Barnehagen er stengt",
+      "type": "event"
+    }
+  ]
+}
+
