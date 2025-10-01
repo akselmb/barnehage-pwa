@@ -16,7 +16,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLogin, loading = false }
     
     try {
       await onLogin(email, password);
-    } catch (err) {
+    } catch {
       setError('Kunne ikke logge inn. Sjekk e-post og passord.');
     }
   };
