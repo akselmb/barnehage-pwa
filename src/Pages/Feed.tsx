@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 // Mock data types
 interface Post {
@@ -177,11 +178,17 @@ const Feed: React.FC = () => {
       <div className="max-w-2xl mx-auto px-4 py-4">
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
           <div className="flex items-center space-x-3 mb-3">
-            <img 
+            {/* <img 
               src="https://i.pravatar.cc/150?img=6" 
               alt="Your avatar" 
               className="w-10 h-10 rounded-full"
-            />
+            /> */}
+            <Avatar className="h-10 w-10 rounded-full">
+                {/* <AvatarImage src={post.author.avatar} alt={post.author.name} /> */}
+                <AvatarFallback className="bg-blue-100 text-blue-800 font-semibold text-xl">
+                  A
+                </AvatarFallback>
+            </Avatar>
             <button 
               onClick={() => setShowCreatePost(!showCreatePost)}
               className="flex-1 text-left text-gray-500 bg-gray-100 rounded-full px-4 py-2 hover:bg-gray-200 transition-colors"
@@ -234,11 +241,17 @@ const Feed: React.FC = () => {
           <div key={post.id} className="bg-white rounded-lg shadow-sm border border-gray-200 mb-4">
             {/* Post Header */}
             <div className="flex items-center space-x-3 p-4">
-              <img 
+              {/* <img 
                 src={post.author.avatar} 
                 alt={post.author.name}
                 className="w-10 h-10 rounded-full"
-              />
+              /> */}
+              <Avatar className="h-10 w-10 rounded-full">
+                {/* <AvatarImage src={post.author.avatar} alt={post.author.name} /> */}
+                <AvatarFallback className="bg-blue-100 text-blue-800 font-semibold text-xl">
+                  {post.author.name.charAt(0)}
+                </AvatarFallback>
+              </Avatar>
               <div className="flex-1">
                 <h3 className="font-semibold text-gray-900">{post.author.name}</h3>
                 <p className="text-sm text-gray-500">{post.timestamp}</p>
